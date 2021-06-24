@@ -1,13 +1,13 @@
 {
   "PROD": {
     "USE_EUR_KEY_PKGS": true,
-    "SUBMISSION_CDN_URL": "https://submission.coronawarn.app",
-    "DOWNLOAD_CDN_URL": "https://svc90.main.px.t-online.de",
-    "VERIFICATION_CDN_URL": "https://verification.coronawarn.app",
-    "DATA_DONATION_CDN_URL": "https://data.coronawarn.app",
-    "LOG_UPLOAD_SERVER_URL": "https://logupload.coronawarn.app",
+    "SUBMISSION_CDN_URL": "https://submission-test.cwa.gov.si",
+    "DOWNLOAD_CDN_URL": "https://svc90-test.cwa.gov.si",
+    "VERIFICATION_CDN_URL": "https://verification-test.cwa.gov.si",
+    "PUB_KEYS_SIGNATURE_VERIFICATION": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE9/HUs+ssvOdmv+BZPjubaUiYOWYTd5iRMopbdBzpEPXbyQBSmOFesVJ7y3GTU/1ql9FuIrqB7YBkhZZExPEqEw==",
+    "DATA_DONATION_CDN_URL": "",
+    "LOG_UPLOAD_SERVER_URL": "",
     "SAFETYNET_API_KEY": "placeholder",
-    "PUB_KEYS_SIGNATURE_VERIFICATION": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEc7DEstcUIRcyk35OYDJ95/hTg3UVhsaDXKT0zK7NhHPXoyzipEnOp3GyNXDVpaPi3cAfQmxeuFMZAIX2+6A5Xg==",
-    "CROWD_NOTIFIER_PUBLIC_KEY": "gwLMzE153tQwAOf2MZoUXXfzWTdlSpfS99iZffmcmxOG9njSK4RTimFOFwDh6t0Tyw8XR01ugDYjtuKwjjuK49Oh83FWct6XpefPi9Skjxvvz53i9gaMmUEc96pbtoaA"
+    "CROWD_NOTIFIER_PUBLIC_KEY": ""
   }
 }

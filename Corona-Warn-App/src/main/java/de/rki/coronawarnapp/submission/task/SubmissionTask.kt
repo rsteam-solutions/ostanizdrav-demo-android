@@ -254,7 +254,7 @@ class SubmissionTask @Inject constructor(
     }
 
     companion object {
-        private const val FALLBACK_COUNTRY = "DE"
+        private const val FALLBACK_COUNTRY = "SI"
         private const val RETRY_ATTEMPTS = Int.MAX_VALUE
         private val USER_INACTIVITY_TIMEOUT = Duration.standardMinutes(30)
         private const val TAG: String = "SubmissionTask"

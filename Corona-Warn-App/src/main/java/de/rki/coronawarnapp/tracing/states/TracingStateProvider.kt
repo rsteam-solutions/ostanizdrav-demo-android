@@ -62,7 +62,8 @@ class TracingStateProvider @AssistedInject constructor(
             tracingProgress != TracingProgress.Idle -> TracingInProgress(
                 isInDetailsMode = isDetailsMode,
                 riskState = latestCalc.riskState,
-                tracingProgress = tracingProgress
+                tracingProgress = tracingProgress,
+                daysWithEncounters = latestCalc.daysWithEncounters
             )
             latestCalc.riskState == RiskState.LOW_RISK -> LowRisk(
                 isInDetailsMode = isDetailsMode,

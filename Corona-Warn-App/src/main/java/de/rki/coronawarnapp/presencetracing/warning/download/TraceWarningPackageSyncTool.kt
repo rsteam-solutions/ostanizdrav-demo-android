@@ -33,7 +33,7 @@ class TraceWarningPackageSyncTool @Inject constructor(
         repository.cleanMetadata()
         return measureTime(
             { Timber.tag(TAG).d("syncPackagesForLocation(DE), took %dms", it) },
-            { syncPackagesForLocation(LocationCode("DE")) }
+            { syncPackagesForLocation(LocationCode("SI")) }
         )
     }
 

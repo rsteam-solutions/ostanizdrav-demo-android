@@ -24,14 +24,14 @@ class KeyCacheDatabaseTest {
     fun crud() {
         val keyDay = CachedKeyInfo(
             type = CachedKeyInfo.Type.LOCATION_DAY,
-            location = LocationCode("DE"),
+            location = LocationCode("SI"),
             day = LocalDate.now(),
             hour = null,
             createdAt = Instant.now()
         )
         val keyHour = CachedKeyInfo(
             type = CachedKeyInfo.Type.LOCATION_HOUR,
-            location = LocationCode("DE"),
+            location = LocationCode("SI"),
             day = LocalDate.now(),
             hour = LocalTime.now(),
             createdAt = Instant.now()

@@ -222,7 +222,8 @@ data class TracingDisabled(
 data class TracingInProgress(
     override val riskState: RiskState,
     override val isInDetailsMode: Boolean,
-    val tracingProgress: TracingProgress
+    val tracingProgress: TracingProgress,
+    val daysWithEncounters: Int
 ) : TracingState() {
 
     fun getProgressCardHeadline(c: Context): String = when (tracingProgress) {
@@ -255,7 +256,7 @@ data class TracingInProgress(
     @ColorInt
     fun getContainerColor(c: Context): Int = when (riskState) {
         RiskState.INCREASED_RISK -> R.color.colorSemanticHighRisk
-        RiskState.LOW_RISK -> R.color.colorSemanticLowRisk
+        RiskState.LOW_RISK -> if (daysWithEncounters > 0) R.color.colorSemanticMediumRisk else R.color.colorSemanticLowRisk
         RiskState.CALCULATION_FAILED -> R.color.colorSemanticUnknownRisk
     }.let { c.getColorCompat(it) }
 }

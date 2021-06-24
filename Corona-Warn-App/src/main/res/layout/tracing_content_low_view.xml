@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorSemanticLowRisk"
+        android:background="@{state.daysWithEncounters > 0 ? @color/colorSemanticMediumRisk : @color/colorSemanticLowRisk}"
         android:padding="@dimen/spacing_normal">
 
         <TextView

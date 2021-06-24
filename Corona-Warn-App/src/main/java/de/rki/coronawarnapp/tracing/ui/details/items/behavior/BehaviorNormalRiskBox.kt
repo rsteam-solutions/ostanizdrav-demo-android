@@ -33,7 +33,8 @@ class BehaviorNormalRiskBox(
 
     data class Item(
         val tracingStatus: GeneralTracingStatus.Status,
-        val riskState: RiskState
+        val riskState: RiskState,
+        val daysWithEncounters: Int
     ) : BehaviorItem {
         fun getIconColor(context: Context) = when {
             tracingStatus == GeneralTracingStatus.Status.TRACING_INACTIVE -> R.color.colorTextSemanticNeutral
@@ -44,7 +45,7 @@ class BehaviorNormalRiskBox(
         fun getBackgroundColor(context: Context) = when {
             tracingStatus == GeneralTracingStatus.Status.TRACING_INACTIVE -> R.color.colorSurface2
             riskState == RiskState.INCREASED_RISK -> R.color.colorSemanticHighRisk
-            riskState == RiskState.LOW_RISK -> R.color.colorSemanticLowRisk
+            riskState == RiskState.LOW_RISK -> if (daysWithEncounters > 0) R.color.colorSemanticMediumRisk else R.color.colorSemanticLowRisk
             else -> R.color.colorSurface2
         }.let { context.getColorCompat(it) }
     }

@@ -9,13 +9,14 @@ import de.rki.coronawarnapp.util.ContextExtensions.getColorCompat
 data class TracingDetailsState(
     val tracingStatus: GeneralTracingStatus.Status,
     val riskState: RiskState,
-    val isManualKeyRetrievalEnabled: Boolean
+    val isManualKeyRetrievalEnabled: Boolean,
+    val daysWithEncounters: Int
 ) {
 
     fun getRiskColor(c: Context): Int = when {
         tracingStatus == GeneralTracingStatus.Status.TRACING_INACTIVE -> R.color.colorSemanticUnknownRisk
         riskState == RiskState.INCREASED_RISK -> R.color.colorSemanticHighRisk
-        riskState == RiskState.LOW_RISK -> R.color.colorSemanticLowRisk
+        riskState == RiskState.LOW_RISK -> if (daysWithEncounters > 0) R.color.colorSemanticMediumRisk else R.color.colorSemanticLowRisk
         else -> R.color.colorSemanticUnknownRisk
     }.let { c.getColorCompat(it) }
 

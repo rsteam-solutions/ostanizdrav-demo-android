@@ -92,7 +92,7 @@ class KeyDownloadParametersMapper @Inject constructor() : KeyDownloadConfig.Mapp
             }
             RevokedKeyPackage.TraceWarning(
                 etag = it.etag,
-                region = LocationCode("DE"),
+                region = LocationCode("SI"),
             )
         }
     }

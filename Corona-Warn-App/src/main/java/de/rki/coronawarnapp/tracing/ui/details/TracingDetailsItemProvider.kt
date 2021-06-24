@@ -57,7 +57,8 @@ class TracingDetailsItemProvider @Inject constructor(
                     BehaviorIncreasedRiskBox.Item
                 else -> BehaviorNormalRiskBox.Item(
                     tracingStatus = status,
-                    riskState = latestCalc.riskState
+                    riskState = latestCalc.riskState,
+                    daysWithEncounters = latestCalc.daysWithEncounters
                 )
             }.also { add(it) }
 

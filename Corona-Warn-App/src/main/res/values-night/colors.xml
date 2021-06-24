@@ -35,6 +35,8 @@
     <color name="colorSemanticNeutralRiskPressed">#556675</color>
     <color name="colorSemanticUnknownRisk">#232324</color>
     <color name="colorSemanticUnknownRiskPressed">#39393A</color>
+    <color name="colorSemanticMediumRisk">#DD8B10</color>
+    <color name="colorSemanticMediumRiskPressed">#B57310</color>
 
     <!-- Accent -->
     <color name="colorAccentTintButton">#007FAD</color>

@@ -87,7 +87,8 @@ class TracingDetailsFragmentViewModel @AssistedInject constructor(
         TracingDetailsState(
             tracingStatus = status,
             riskState = latestCalc.riskState,
-            isManualKeyRetrievalEnabled = isRestartButtonEnabled
+            isManualKeyRetrievalEnabled = isRestartButtonEnabled,
+            daysWithEncounters = latestCalc.daysWithEncounters
         )
     }
         .onStart { Timber.v("TracingDetailsState FLOW start") }
